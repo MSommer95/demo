@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Demo App</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="content col-sm-5 m-auto">
+        <div class="container mt-3">
+            <div class="card mx-auto mt-3 bg-light">
+                <div class="card-body bg-light align-self-center">
+                    <div>
+                        <h3 class="card-title text-center">KW {{ current_calendar_week }}</h3>
+                    </div>
+                    <div class="row">
+                        <p class="card-text">{{ current_date }}</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="title ">
+                        <form action="{{ url_for('my_week') }}" method="post">
+                            <div class="row">
+                                <input class="form-control ml-3 mr-auto col-md-5" id="date-to-check" name="date_to_check" type="date">
+                                <button class="btn btn-dark mr-3 ml-auto" type="submit">Wählen</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
